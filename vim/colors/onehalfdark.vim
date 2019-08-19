@@ -28,6 +28,7 @@ let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
 
 let s:fg          = s:white
 let s:bg          = s:black
+let s:subtle      = { "gui": "#474e5d", "cterm": "239" }
 
 let s:comment_fg  = { "gui": "#5c6370", "cterm": "241" }
 let s:gutter_bg   = { "gui": "#282c34", "cterm": "236" }
@@ -36,7 +37,7 @@ let s:gutter_fg   = { "gui": "#919baa", "cterm": "247" }
 let s:cursor_line = { "gui": "#313640", "cterm": "237" }
 let s:color_col   = { "gui": "#313640", "cterm": "237" }
 
-let s:selection   = { "gui": "#474e5d", "cterm": "239" }
+let s:selection   = s:subtle
 let s:vertsplit   = { "gui": "#313640", "cterm": "237" }
 
 
@@ -58,10 +59,9 @@ function! s:h(group, fg, bg, attr)
   endif
 endfun
 
-
 " User interface colors {
 call s:h("Normal", s:fg, s:bg, "")
-call s:h("NonText", s:fg, "", "")
+call s:h("NonText", s:subtle, "", "")
 
 call s:h("Cursor", s:bg, s:blue, "")
 call s:h("CursorColumn", "", s:cursor_line, "")
