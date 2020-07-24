@@ -28,6 +28,7 @@ let s:white       = { "gui": "#fafafa", "cterm": "231" }
 
 let s:fg          = s:black
 let s:bg          = s:white
+let s:subtle      = { "gui": "#d3d4da", "cterm": "247" }
 
 let s:comment_fg  = { "gui": "#a0a1a7", "cterm": "247" }
 let s:gutter_bg   = { "gui": "#fafafa", "cterm": "231" }
@@ -61,7 +62,7 @@ endfun
 
 " User interface colors {
 call s:h("Normal", s:fg, s:bg, "")
-call s:h("NonText", s:fg, "", "")
+call s:h("NonText", s:subtle, "", "")
 
 call s:h("Cursor", s:bg, s:blue, "")
 call s:h("CursorColumn", "", s:cursor_line, "")
